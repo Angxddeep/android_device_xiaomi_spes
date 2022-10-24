@@ -14,6 +14,7 @@ def FullOTA_InstallEnd(info):
 
 
 def IncrementalOTA_InstallEnd(info):
+    info.input_zip = info.target_zip
     OTA_InstallEnd(info)
     return
 
