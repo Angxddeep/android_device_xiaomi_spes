@@ -261,9 +261,6 @@ USE_SENSOR_MULTI_HAL := true
 # SurfaceFlinger
 TARGET_USE_AOSP_SURFACEFLINGER := true
 
-# VNDK
-BOARD_VNDK_VERSION := current
-
 # Sepolicy
 include device/qcom/sepolicy_vndr/legacy-um/SEPolicy.mk
 
