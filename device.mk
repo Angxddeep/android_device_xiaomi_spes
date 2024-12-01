@@ -251,6 +251,26 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
+# Init
+PRODUCT_PACKAGES += \
+    init.mdm.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sh \
+    init.qcom.usb.sh
+
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    fstab.qcom.ramdisk \
+    fstab.zram \
+    init.qcom.power.rc \
+    init.qcom.rc \
+    init.spes.rc \
+    init.qcom.usb.rc \
+    init.recovery.qcom.rc \
+    init.stnfc.rc \
+    init.target.rc \
+    ueventd.qcom.rc
+
 # Input
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/gpio-keys.kl:$(TARGET_COPY_OUT_SYSTEM)/usr/keylayout/gpio-keys.kl \
@@ -382,26 +402,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.secure_element@1.2.vendor
-
-# Rootdir
-PRODUCT_PACKAGES += \
-    init.mdm.sh \
-    init.qcom.post_boot.sh \
-    init.qcom.sh \
-    init.qcom.usb.sh
-
-PRODUCT_PACKAGES += \
-    fstab.qcom \
-    fstab.qcom_ramdisk \
-    fstab.zram \
-    init.qcom.power.rc \
-    init.qcom.rc \
-    init.spes.rc \
-    init.qcom.usb.rc \
-    init.recovery.qcom.rc \
-    init.stnfc.rc \
-    init.target.rc \
-    ueventd.qcom.rc
 
 # Sensors
 PRODUCT_PACKAGES += \
