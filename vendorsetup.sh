@@ -23,6 +23,9 @@ git clone https://github.com/spes-development/hardware_xiaomi hardware/xiaomi
 # MiuiCamera(Lecia 5.0)
 git clone --depth=1 https://gitlab.com/ItzDFPlayer/vendor_xiaomi_miuicamera -b leica-5.0 vendor/xiaomi/miuicamera
 
+# Debug Tools
+git clone https://github.com/spes-development/hardware_samsung-extra_interfaces -b lineage-22 hardware/samsung-ext/interfaces
+
 # Sepolicy fix for imsrcsd
 echo -e "${color}Switch back to legacy imsrcsd sepolicy${end}"
 rm -rf device/qcom/sepolicy_vndr/legacy-um/qva/vendor/bengal/ims/imsservice.te
