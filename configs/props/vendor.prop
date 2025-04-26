@@ -292,6 +292,7 @@ TapSlop=1px
 ro.incremental.enable=true
 
 # USB
+ro.usb.uvc.disable_video_encode_flag=true
 vendor.usb.diag.func.name=diag
 ro.usb.uvc.enabled=true
 vendor.usb.dpl.inst.name=dpl
