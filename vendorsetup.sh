@@ -20,9 +20,6 @@ git clone --depth=1 https://github.com/muralivijay/kernel_xiaomi_sm6225 kernel/x
 rm -fr hardware/xiaomi
 git clone https://github.com/spes-development/hardware_xiaomi hardware/xiaomi
 
-# MiuiCamera(Lecia 5.0)
-git clone --depth=1 https://gitlab.com/ItzDFPlayer/vendor_xiaomi_miuicamera -b leica-5.0 vendor/xiaomi/miuicamera
-
 # Debug Tools
 git clone https://github.com/spes-development/hardware_samsung-extra_interfaces -b lineage-22 hardware/samsung-ext/interfaces
 
