@@ -48,7 +48,6 @@ lib_fixups: lib_fixups_user_type = {
         'com.qualcomm.qti.dpm.api@1.0',
         'libmmosal',
         'vendor.qti.hardware.fm@1.0',
-        'vendor.qti.hardware.wifidisplaysession@1.0',
         'vendor.qti.imsrtpservice@3.0',
     ): lib_fixup_vendor_suffix,
 }
@@ -67,8 +66,10 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
         .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
-    'system_ext/lib64/libwfdnative.so': blob_fixup()
-        .add_needed('libinput_shim.so'),
+    'vendor/lib/libOmxVideoDSMode.so': blob_fixup()
+        .remove_needed('libwfdcommonutils_proprietary.so')
+        .remove_needed('libwfdmmservice_proprietary.so')
+        .remove_needed('libwfdutils_proprietary.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
