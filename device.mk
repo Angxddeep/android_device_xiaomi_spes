@@ -383,6 +383,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     SpesDialer \
     SpesFrameworks \
+    SpesLauncher \
     SpesSettings \
     SpesSettingsProvider \
     SpesSimpleDeviceConfig \
