@@ -41,7 +41,6 @@ ro.max.fling_velocity=20000
 ro.qcom.adreno.qgl.ShaderStorageImageExtendedFormats=0
 
 # Graphics
-debug.sf.latch_unsignaled=0
 debug.sf.auto_latch_unsignaled=0
 debug.sf.enable_gl_backpressure=1
 debug.sf.frame_rate_multiple_threshold=90
