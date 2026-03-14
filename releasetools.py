@@ -1,3 +1,4 @@
+#!/bin/env python3
 #
 # Copyright (C) 2020-2021 The LineageOS Project
 #
