@@ -26,6 +26,9 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Boot animaton
 TARGET_BOOT_ANIMATION_RES := 1080
 
+# EvolutionX Flags
+EVO_BUILD_TYPE := Official
+
 # Disable EPPE
 TARGET_DISABLE_EPPE := true
 
