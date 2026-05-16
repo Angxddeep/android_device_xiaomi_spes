@@ -13,5 +13,11 @@
     "target_path": "hardware/xiaomi",
     "remote": "github-non-los",
     "branch": "lineage-23.2"
-  }
+  },
+  {
+    "repository": "Roynas-Android-Playground/hardware_samsung-extra_interfaces",
+    "target_path": "hardware/samsung-ext/interfaces",
+    "remote": "github-non-los",
+    "branch": "lineage-23.2"
+  }       
 ]
