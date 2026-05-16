@@ -1,4 +1,3 @@
-source device/xiaomi/spes/vendorsetup.sh
 # ROM source patches
 
 color="\033[0;32m"
