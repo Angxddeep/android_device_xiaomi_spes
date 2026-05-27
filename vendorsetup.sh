@@ -17,6 +17,15 @@ rm -fr hardware/lineage/interfaces/health/aidl/default/Android.bp
 rm -fr hardware/xiaomi/interfaces/xiaomi/hardware/mtdservice/1.3
 rm -fr hardware/xiaomi/interfaces/xiaomi/hardware/mfidoca/1.0
 
+# HALS
+echo -e "${color}cloning audio HAL ${end}"
+rm -rf hardware/qcom-caf/sm8250/audio
+git clone https://github.com/muralivijay/android_hardware_qcom_audio.git -b lineage-23.2-caf-sm8250 hardware/qcom-caf/sm8250/audio
+
+echo -e "${color}cloning display HAL ${end}"
+rm -rf hardware/qcom-caf/sm8250/display
+git clone https://github.com/muralivijay/android_hardware_qcom_display.git -b lineage-23.2-caf-sm8250 hardware/qcom-caf/sm8250/display
+
 # Sepolicy fix for imsrcsd
 echo -e "${color}Switch back to legacy imsrcsd sepolicy${end}"
 rm -rf device/qcom/sepolicy_vndr/legacy-um/qva/vendor/bengal/ims/imsservice.te
