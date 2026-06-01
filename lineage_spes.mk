@@ -28,7 +28,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 # EvolutionX Flags
 EVO_BUILD_TYPE := Official
-TARGET_SUPPORT_BLUR := true
+TARGET_ENABLE_BLUR := true
 
 # Disable EPPE
 TARGET_DISABLE_EPPE := true
