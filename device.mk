@@ -329,6 +329,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
+# Shims
+PRODUCT_PACKAGES += \
+    libbase_shim
+
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service
