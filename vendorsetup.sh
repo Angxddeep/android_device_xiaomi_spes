@@ -32,5 +32,4 @@ cp device/qcom/sepolicy_vndr/legacy-um/qva/vendor/bengal/legacy-ims/hal_rcsservi
 sed -i 's/"qti_kernel_headers"/"qti_kernel_headers_old"/g' vendor/lineage/build/soong/Android.bp
 
 # Renaming stuff at lineage_compat to avoid conflicts
-sed -i 's/"android.hidl.base@1.0"/"android.hidl.base@1.0.non.spes"/g' vendor/lineage/build/soong/Android.bp
-sed -i 's/"qti_kernel_headers"/"qti_kernel_headers_old"/g' vendor/lineage/build/soong/Android.bp
+sed -i 's/"android.hidl.base@1.0"/"android.hidl.base@1.0.non.spes"/g' hardware/lineage/compat/Android.bp
