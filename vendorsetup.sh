@@ -33,3 +33,4 @@ sed -i 's/"qti_kernel_headers"/"qti_kernel_headers_old"/g' vendor/lineage/build/
 
 # Renaming stuff at lineage_compat to avoid conflicts
 sed -i 's/"android.hidl.base@1.0"/"android.hidl.base@1.0.non.spes"/g' hardware/lineage/compat/Android.bp
+sed -i 's/"libpiex_shim"/"libpiex_shim.non.spes"/g' hardware/lineage/compat/Android.bp
