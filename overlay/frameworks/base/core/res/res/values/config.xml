@@ -875,6 +875,9 @@
          (lower-end devices may want to disable) -->
     <bool name="config_deviceSupportsHighPerfTransitions">false</bool>
 
+     <!-- Enable blur using overlay -->
+    <bool name="config_enableBlur">true</bool>
+
     <!-- Flag indicating whether the surface flinger is inefficient
         at performing a blur.  Used by parts of the UI to turn off
         the blur effect where it isn't worth the performance hit.
