@@ -874,8 +874,9 @@
     <!-- Whether WM DisplayContent supports high performance transitions
          (lower-end devices may want to disable) -->
     <bool name="config_deviceSupportsHighPerfTransitions">false</bool>
-
-     <!-- Enable blur using overlay -->
+     
+    <!-- Enable blur using overlay -->
+    <bool name="config_enableBlurExpansion">true</bool>
     <bool name="config_enableBlur">true</bool>
 
     <!-- Flag indicating whether the surface flinger is inefficient
