@@ -24,8 +24,17 @@ namespace_imports = [
     'hardware/lineage/interfaces/power-libperfmgr',
     'hardware/qcom-caf/bootctrl',
     'hardware/qcom-caf/common/libqti-perfd-client',
+    'hardware/qcom-caf/sm8250',
+    'hardware/qcom-caf/wlan',
+    'hardware/qcom-caf/wlan/qcwcn',
     'hardware/xiaomi',
     'vendor/qcom/opensource/commonsys/display',
+    'vendor/qcom/opensource/commonsys-intf/display',
+    'vendor/qcom/opensource/display',
+    'vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um',
+    'vendor/qcom/opensource/dataservices',
+    'hardware/qcom-caf/thermal-legacy-um',
+    'device/xiaomi/spes',
 ]
 
 
@@ -45,6 +54,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    ('vendor/bin/STFlashTool', 'vendor/lib64/libstfactory-vendor.so'): blob_fixup()
+        .add_needed('libbase_shim.so'),
     'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so': blob_fixup()
         .sig_replace('13 0A 00 94', '1F 20 03 D5'),
     'vendor/lib64/camera/components/com.qti.node.mialgocontrol.so': blob_fixup()
@@ -54,13 +65,21 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcrypto.so', 'libcrypto-v34.so'),
     'vendor/lib64/libdpps.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
+    'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
+        .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
+    'system_ext/lib/libwfdservice.so': blob_fixup()
+        .remove_needed('android.media.audio.common.types-V1-cpp.so'),
+    'system_ext/lib64/libwfdnative.so': blob_fixup()
+        .add_needed('libinput_shim.so'),
+    'system_ext/lib64/libwfdservice.so': blob_fixup()
+        .remove_needed('android.media.audio.common.types-V1-cpp.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
     'spes',
     'xiaomi',
     blob_fixups=blob_fixups,
-    check_elf=False,
+    check_elf=True,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
 )
