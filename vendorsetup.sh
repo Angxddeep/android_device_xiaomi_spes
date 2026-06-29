@@ -6,11 +6,6 @@ end="\033[0m"
 echo -e "${color}Applying patches${end}"
 sleep 1
 
-# Hardware/Xiaomi
-rm -fr hardware/lineage/interfaces/health/aidl/default/Android.bp
-rm -fr hardware/xiaomi/interfaces/xiaomi/hardware/mtdservice/1.3
-rm -fr hardware/xiaomi/interfaces/xiaomi/hardware/mfidoca/1.0
-
 # HALS
 echo -e "${color}cloning audio HAL ${end}"
 rm -rf hardware/qcom-caf/sm8250/audio
