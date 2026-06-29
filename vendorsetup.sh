@@ -19,7 +19,3 @@ git clone https://github.com/muralivijay/android_hardware_qcom_display.git -b li
 echo -e "${color}Switch back to legacy imsrcsd sepolicy${end}"
 rm -rf device/qcom/sepolicy_vndr/legacy-um/qva/vendor/bengal/ims/imsservice.te
 cp device/qcom/sepolicy_vndr/legacy-um/qva/vendor/bengal/legacy-ims/hal_rcsservice.te device/qcom/sepolicy_vndr/legacy-um/qva/vendor/bengal/ims/hal_rcsservice.te
-
-# Renaming stuff at lineage_compat to avoid conflicts
-sed -i 's/"android.hidl.base@1.0"/"android.hidl.base@1.0.non.spes"/g' hardware/lineage/compat/Android.bp
-sed -i 's/"libpiex_shim"/"libpiex_shim.non.spes"/g' hardware/lineage/compat/Android.bp
