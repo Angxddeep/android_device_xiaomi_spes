@@ -271,6 +271,7 @@ vendor/lib64/camera/fdconfigvideolite.bin
 -vendor/lib64/hw/com.qti.chi.override.so
 -vendor/lib64/libHalSuperSensorServer.so
 -vendor/lib64/libI420colorconvert.so
+-vendor/lib64/libmm-color-convertor.so
 -vendor/lib64/libSuperSensor.so
 -vendor/lib64/libSuperSensorCPU.so
 -vendor/lib64/libaidenoiser.so
@@ -278,7 +279,7 @@ vendor/lib64/camera/fdconfigvideolite.bin
 -vendor/lib64/libanc_dc_base.so
 -vendor/lib64/libbitmlengine.so
 -vendor/lib64/libc++_shared.so
--vendor/lib64/libc++_shared_vf.so
+-vendor/lib64/libc++_shared_vf.so;FIX_SONAME
 -vendor/lib64/libcamera_nn_stub.so
 -vendor/lib64/libcamera_scene.so
 -vendor/lib64/libcamerapostproc.so
@@ -294,6 +295,7 @@ vendor/lib64/camera/fdconfigvideolite.bin
 -vendor/lib64/libmctfengine_stub.so
 -vendor/lib64/libmiai_supernight.so
 -vendor/lib64/libmialgoengine.so
+-vendor/lib64/libxml2_vendor.so
 -vendor/lib64/libmibokeh_712.so
 -vendor/lib64/libmorpho_Lowlight.so
 -vendor/lib64/libmpbase.so
@@ -472,7 +474,7 @@ vendor/etc/camera/vidhance_calibration
 -vendor/lib64/libmmcamera_mfnr_t4.so
 
 # Consumer IR
--vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.bengal.so
+-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.bengal.so;FIX_SONAME
 
 # CDSP
 -vendor/bin/cdsprpcd
@@ -538,6 +540,7 @@ vendor/etc/init/cnd.rc
 -vendor/lib64/libwms.so
 -vendor/lib64/libwqe.so
 -vendor/lib64/libxml.so
+-vendor/lib/libxml.so
 -vendor/lib64/vendor.qti.data.factory@2.0.so
 -vendor/lib64/vendor.qti.data.factory@2.1.so
 -vendor/lib64/vendor.qti.data.factory@2.2.so
@@ -661,6 +664,8 @@ vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
 -vendor/lib64/vendor.qti.hardware.qseecom@1.0.so
 
 # Embedded Secure Element power manager
+-vendor/lib/vendor.qti.esepowermanager@1.0.so
+-vendor/lib/vendor.qti.esepowermanager@1.1.so
 -vendor/lib64/vendor.qti.esepowermanager@1.0.so
 -vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
@@ -669,7 +674,7 @@ vendor/etc/permissions/com.fingerprints.extension.xml
 vendor/framework/com.fingerprints.extension.jar
 -vendor/lib/vendor.qti.hardware.fingerprint@1.0.so
 -vendor/lib64/hw/fingerprint.fpc.default.so
--vendor/lib64/hw/fingerprint.goodix.default.so
+-vendor/lib64/hw/fingerprint.goodix.default.so;FIX_SONAME
 -vendor/lib64/libgf_ca.so
 -vendor/lib64/libgf_hal.so
 -vendor/lib64/libgoodixhwfingerprint.so
@@ -711,6 +716,7 @@ vendor/etc/xtra_root_cert.pem
 -vendor/lib64/libaoa.so
 -vendor/lib64/libbatching.so
 -vendor/lib64/libcacertclient.so
+-vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 -vendor/lib64/libdataitems.so
 -vendor/lib64/libgdtap.so
 -vendor/lib64/libgeofencing.so
@@ -738,6 +744,9 @@ vendor/etc/xtra_root_cert.pem
 -vendor/lib64/libxtadapter.so
 -vendor/lib64/libxtwifi_server_protocol.so
 -vendor/lib64/libxtwifi_server_protocol_uri_v3.so
+-vendor/lib64/libasn1cper.so
+-vendor/lib64/libasn1crt.so
+-vendor/lib64/libasn1crtx.so
 -vendor/lib64/vendor.qti.gnss@1.0.so
 -vendor/lib64/vendor.qti.gnss@1.1.so
 -vendor/lib64/vendor.qti.gnss@1.2.so
@@ -823,9 +832,11 @@ system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar
 -system_ext/lib64/lib-imsvt.so
 -system_ext/lib64/lib-imsvtextutils.so
 -system_ext/lib64/lib-imsvtutils.so
+-system_ext/lib/libdiag_system.so
 -system_ext/lib64/libdiag_system.so
 -system_ext/lib64/libimscamera_jni.so
 -system_ext/lib64/libimsmedia_jni.so
+-system_ext/lib/vendor.qti.diaghal@1.0.so
 -system_ext/lib64/vendor.qti.diaghal@1.0.so
 -system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 -system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
@@ -1019,9 +1030,13 @@ vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/etc/sec_config
 -vendor/lib/libdiag.so
 -vendor/lib/libdsi_netctrl.so
+-vendor/lib/libmdmdetect.so
+-vendor/lib/libconfigdb.so
+-vendor/lib/libnetmgr.so
 -vendor/lib/libdsutils.so
 -vendor/lib/libidl.so
 -vendor/lib/libqcci_legacy.so
+-vendor/lib/libqmi_legacy.so
 -vendor/lib/libqcmaputils.so
 -vendor/lib/libqdi.so
 -vendor/lib/libqdp.so
@@ -1038,6 +1053,7 @@ vendor/etc/sec_config
 -vendor/lib64/libdsutils.so
 -vendor/lib64/libidl.so
 -vendor/lib64/libqcci_legacy.so
+-vendor/lib64/libqmi_legacy.so
 -vendor/lib64/libqcmaputils.so
 -vendor/lib64/libqdi.so
 -vendor/lib64/libqdp.so
@@ -1181,7 +1197,7 @@ vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/elliptic_sensor.xml
 -vendor/lib64/hw/sensors.elliptic@2.0.so
--vendor/lib64/libnotifyaudiohal.so
+-vendor/lib64/libnotifyaudiohal.so;FIX_SONAME
 -vendor/lib64/libsensorcal.so
 -vendor/lib64/libsensorslog.so
 -vendor/lib64/libsns_device_mode_stub.so
@@ -1330,6 +1346,7 @@ vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc
 -vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so
 -vendor/lib64/libGPQTEEC_vendor.so
 -vendor/lib64/libGPTEE_vendor.so
+-vendor/lib/libGPTEE_vendor.so
 -vendor/lib64/libQTEEConnector_listener.so
 -vendor/lib64/libQTEEConnector_vendor.so
 -vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
@@ -1396,8 +1413,25 @@ system_ext/etc/wfdconfigsink.xml
 -system_ext/lib/vendor.qti.hardware.wifidisplaysession@1.0.so
 -system_ext/lib64/libmmrtpdecoder.so
 -system_ext/lib64/libmmrtpencoder.so
+-system_ext/lib64/com.qualcomm.qti.wifidisplayhal@1.0.so
+-system_ext/lib64/libwfdavenhancements.so
 -system_ext/lib64/libwfdclient.so
 -system_ext/lib64/libwfdnative.so
+-system_ext/lib64/libwfdcommonutils.so
+-system_ext/lib64/libwfdconfigutils.so
+-system_ext/lib64/libwfddisplayconfig.so
+-system_ext/lib64/libwfdmminterface.so
+-system_ext/lib64/libwfdmmsink.so
+-system_ext/lib64/libwfdmmsrc_system.so
+-system_ext/lib64/libwfdrtsp.so
+-system_ext/lib64/libwfdservice.so
+-system_ext/lib64/libwfdsinksm.so
+-system_ext/lib64/libwfduibcinterface.so
+-system_ext/lib64/libwfduibcsink.so
+-system_ext/lib64/libwfduibcsinkinterface.so
+-system_ext/lib64/libwfduibcsrc.so
+-system_ext/lib64/libwfduibcsrcinterface.so
+-system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 -vendor/bin/wfdhdcphalservice
 -vendor/bin/wfdvndservice
 -vendor/bin/wifidisplayhalservice
