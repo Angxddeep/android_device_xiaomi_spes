@@ -377,10 +377,19 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/com.android.nfc_extras.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_k7tn/com.android.nfc_extras.xml
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
-
 PRODUCT_ENFORCE_RRO_TARGETS := *
+
+PRODUCT_PACKAGES += \
+    SpesDialer \
+    SpesFrameworks \
+    SpesSettings \
+    SpesSettingsProvider \
+    SpesSimpleDeviceConfig \
+    SpesSystemUI \
+    SpesTelephony
+
+PRODUCT_PACKAGES += \
+    SpesDeviceAsWebcam
 
 # Power
 PRODUCT_PACKAGES += \
