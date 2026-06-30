@@ -981,13 +981,6 @@ vendor/lib64/libmlipay@1.1.so
 vendor/lib64/libmt@1.3.so
 vendor/lib64/libwvkeybox.so
 
-# Modules
-vendor/lib/modules/modules.alias
-vendor/lib/modules/modules.dep
-vendor/lib/modules/modules.load
-vendor/lib/modules/modules.softdep
-vendor/lib/modules/rdbg.ko
-
 # Neural networks
 vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti
