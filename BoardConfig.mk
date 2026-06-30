@@ -264,7 +264,7 @@ USE_SENSOR_MULTI_HAL := true
 TARGET_USE_AOSP_SURFACEFLINGER := true
 
 # Sepolicy
-include device/qcom/sepolicy_vndr/legacy-um/SEPolicy.mk
+include device/qcom/sepolicy_vndr/SEPolicy.mk
 
 include device/lineage/sepolicy/libperfmgr/sepolicy.mk
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
