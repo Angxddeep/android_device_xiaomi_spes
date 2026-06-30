@@ -1,1 +1,4 @@
+on boot
+    mount none /sys/class/power_supply/bms/cycle_count /sys/class/power_supply/battery/cycle_count bind
+
 on property:vendor.post_boot.parsed=1
