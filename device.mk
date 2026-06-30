@@ -423,6 +423,12 @@ PRODUCT_PACKAGES += \
     libsqlite.vendor \
     libvndfwk_detect_jni.qti.vendor
 
+# Partitions
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint
+
 # Quick Tap
 TARGET_SUPPORTS_QUICK_TAP := true
 
