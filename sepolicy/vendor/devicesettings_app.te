@@ -10,6 +10,8 @@ allow devicesettings_app {
     vendor_sysfs_graphics
 }:file rw_file_perms;
 
+allow devicesettings_app sysfs_livedisplay_tuneable:file rw_file_perms;
+
 # Allow devicesettings_app to operate with vendor_sysfs_battery_supply
 allow devicesettings_app vendor_sysfs_battery_supply:dir search;
 allow devicesettings_app vendor_sysfs_battery_supply:file r_file_perms;
