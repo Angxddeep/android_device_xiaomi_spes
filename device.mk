@@ -156,7 +156,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libcamera_metadata.vendor \
-    libpng.vendor \
     libexif \
     libexif.vendor
 
@@ -217,6 +216,15 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     gralloc.qcom
+
+# EGL symlinks
+PRODUCT_PACKAGES += \
+    libEGL_adreno_symlink32 \
+    libGLESv2_adreno_symlink32 \
+    libq3dtools_adreno_symlink32 \
+    libEGL_adreno_symlink64 \
+    libGLESv2_adreno_symlink64 \
+    libq3dtools_adreno_symlink64
 
 PRODUCT_PACKAGES += \
     disable_configstore
@@ -434,10 +442,6 @@ PRODUCT_PACKAGES += \
 TARGET_SUPPORTS_QUICK_TAP := true
 
 # RIL
-PRODUCT_PACKAGES += \
-    libcurl.vendor \
-    libprocessgroup.vendor \
-    libsqlite.vendor
 
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
@@ -506,6 +510,11 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     telephony-ext
 
+# IMS symlinks
+PRODUCT_PACKAGES += \
+    libimscamera_jni_symlink \
+    libimsmedia_jni_symlink
+
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
@@ -553,6 +562,11 @@ PRODUCT_PACKAGES += \
     wpa_supplicant \
     wpa_supplicant.conf
 
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+    firmware_wlan_mac.bin_symlink
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
@@ -561,9 +575,7 @@ PRODUCT_COPY_FILES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl \
-    libwfdaac_vendor \
-    libjsoncpp.vendor \
-    libpng.vendor
+    libwfdaac_vendor
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
