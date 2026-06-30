@@ -67,12 +67,8 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
         .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
-    'system_ext/lib/libwfdservice.so': blob_fixup()
-        .remove_needed('android.media.audio.common.types-V1-cpp.so'),
     'system_ext/lib64/libwfdnative.so': blob_fixup()
         .add_needed('libinput_shim.so'),
-    'system_ext/lib64/libwfdservice.so': blob_fixup()
-        .remove_needed('android.media.audio.common.types-V1-cpp.so'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
