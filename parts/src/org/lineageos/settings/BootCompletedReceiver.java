@@ -23,7 +23,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.util.Log;
 
-import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.utils.FileUtils;
 import android.content.SharedPreferences;
 import androidx.preference.PreferenceManager;
@@ -40,7 +39,6 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, Intent intent) {
         if (DEBUG) Log.d(TAG, "Received boot completed intent");
-        RefreshUtils.initialize(context);
 
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
