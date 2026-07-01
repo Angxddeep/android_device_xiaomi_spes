@@ -26,15 +26,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 # Boot animaton
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# EvolutionX Flags
-EVO_BUILD_TYPE := Official
-TARGET_ENABLE_BLUR := true
-
-# Disable EPPE
-TARGET_DISABLE_EPPE := true
-
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
 # Fingerprint
-BUILD_FINGERPRINT := "Redmi/spes/spes:13/TKQ1.221114.001/V14.0.5.0.TGCINXM:user/release-keys"
+    BuildFingerprint=Redmi/spes_global/spes:13/TKQ1.221114.001/V816.0.11.0.TGKMIXM:user/release-keys
