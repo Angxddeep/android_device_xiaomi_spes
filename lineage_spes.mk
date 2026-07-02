@@ -29,5 +29,6 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
 
-# Fingerprint
-    BuildFingerprint=Redmi/spes_global/spes:13/TKQ1.221114.001/V816.0.11.0.TGKMIXM:user/release-keys
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BuildFingerprint=Redmi/spes_global/spes:13/TKQ1.221114.001/V816.0.11.0.TGKMIXM:user/release-keys \
+    DeviceProduct=$(PRODUCT_SYSTEM_NAME)

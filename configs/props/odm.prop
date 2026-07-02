@@ -1,2 +1,7 @@
+# SKU properties
+ro.product.property_source_order=odm,product,vendor,system_ext,system
+import /odm/etc/${ro.boot.product.hardware.sku}_build.prop
+import /odm/etc/${ro.boot.product.hardware.sku}-${ro.boot.hwc}_build.prop
+
 # Fwk detect
 ro.vendor.qti.va_odm.support=1
