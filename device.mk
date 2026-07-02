@@ -98,16 +98,11 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.bengal
 
 PRODUCT_PACKAGES += \
-    libaudioroute \
-    libaudioroute.vendor \
     libaudio-resampler \
-    libaudioroute.vendor \
-    libprocessgroup.vendor \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libstagefright_softomx_plugin.vendor \
-    libtinycompress
+    libstagefright_softomx_plugin.vendor
 
 # Audio configs
 PRODUCT_COPY_FILES += \
@@ -122,11 +117,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.1 \
-    android.hardware.bluetooth@1.1.vendor \
-    vendor.qti.hardware.bluetooth_audio@2.1.vendor \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
+    android.hardware.bluetooth@1.1
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -142,19 +133,12 @@ PRODUCT_PACKAGES += \
     libutilscallstack.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
-    libpng.vendor \
     libyuv.vendor \
     android.hardware.camera.device@3.6.vendor
 
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
-    libgui_vendor \
-    libstdc++_vendor \
-    libpiex_shim
-
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.camera.device@1.0.vendor \
-    vendor.qti.hardware.camera.postproc@1.0.vendor
+    libstdc++_vendor
 
 PRODUCT_PACKAGES += \
     libcamera_metadata.vendor \
@@ -190,28 +174,14 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display
 
 PRODUCT_PACKAGES += \
-    vendor.display.config@1.14 \
-    vendor.display.config@1.11.vendor \
-    vendor.display.config@2.0 \
-    vendor.display.config@2.0.vendor
-
-PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.mapper@1.1.vendor \
-    vendor.qti.hardware.display.mapper@2.0.vendor \
-    vendor.qti.hardware.display.mapper@3.0.vendor \
-    vendor.qti.hardware.display.mapper@4.0.vendor \
-    vendor.qti.hardware.display.mapperextensions@1.1.vendor \
     vendor.qti.hardware.memtrack-service
 
 PRODUCT_PACKAGES += \
-    libdisplayconfig.qti \
     libdisplayconfig.system.qti \
-    libqdMetaData \
     libqdMetaData.system \
     libsdmcore \
-    libsdmutils \
     libtinyxml \
     libvulkan
 
@@ -249,29 +219,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-service-qti
 
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.1.vendor \
-    android.hardware.gnss@2.1.vendor
-
-PRODUCT_PACKAGES += \
-    android.hardware.gnss.measurement_corrections@1.0.vendor \
-    android.hardware.gnss.measurement_corrections@1.1.vendor \
-    android.hardware.gnss.visibility_control@1.0.vendor
-
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \
-    android.hardware.biometrics.fingerprint@2.1.vendor \
-    vendor.goodix.hardware.fingerprintextension@1.0.vendor \
-    com.fingerprints.extension@1.0.vendor
+    vendor.goodix.hardware.fingerprintextension@1.0.vendor
 
 # FM
 PRODUCT_PACKAGES += \
     FM2
-
-# Gatekeeper
-PRODUCT_PACKAGES += \
-    android.hardware.gatekeeper@1.0.vendor
 
 # Health
 PRODUCT_PACKAGES += \
@@ -283,9 +238,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0.vendor \
-    android.hidl.memory.block@1.0.vendor \
-    libhidltransport.vendor \
-    libhwbinder.vendor
+    android.hidl.memory.block@1.0.vendor
 
 # Hotword Enrollment
 PRODUCT_COPY_FILES += \
@@ -308,10 +261,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
-# Keymaster
-PRODUCT_PACKAGES += \
-    android.hardware.keymaster@4.1.vendor
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.lineage
@@ -332,10 +281,6 @@ PRODUCT_PACKAGES += \
 # Media
 PRODUCT_PACKAGES += \
     android.hardware.media.omx@1.0-service
-
-PRODUCT_PACKAGES += \
-    libavservices_minijail \
-    libavservices_minijail.vendor
 
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
@@ -360,24 +305,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_audio.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_c2_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_c2_video.xml
 
-# Mlipay
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.mlipay@1.1.vendor \
-    vendor.xiaomi.hardware.mtdservice@1.2.vendor
-
-# Network
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
-
-# Neural Networks
-PRODUCT_PACKAGES += \
-    android.hardware.neuralnetworks@1.3.vendor
-
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service.st \
     com.android.nfc_extras \
-    libchrome.vendor \
     nfc_nci.st21nfc.default \
     SecureElement \
     Tag
@@ -433,13 +364,7 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libcurl.vendor \
-    libjson \
-    libjsoncpp.vendor \
-    libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
-    libsqlite.vendor \
     libvndfwk_detect_jni.qti.vendor
 
 # Partitions
@@ -456,12 +381,7 @@ TARGET_SUPPORTS_QUICK_TAP := true
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.config@1.3.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
-    libprotobuf-cpp-full-3.9.1-vendorcompat \
-    libprotobuf-cpp-lite-3.9.1-vendorcompat \
-    librmnetctl \
-    libxml2
+    android.hardware.secure_element@1.2.vendor
 
 # Rootdir
 PRODUCT_PACKAGES += \
@@ -485,11 +405,7 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    android.hardware.sensors-service.xiaomi-multihal \
-    android.frameworks.sensorservice@1.0.vendor \
-    android.frameworks.sensorservice@1.0 \
-    libsensorndkbridge
+    android.hardware.sensors-service.xiaomi-multihal
 
 PRODUCT_PACKAGES += \
     sensors.spes.v2:64
