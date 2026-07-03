@@ -158,9 +158,6 @@ TARGET_KERNEL_SOURCE := kernel/xiaomi/sm6225
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_LINUX_KERNEL_VERSION := 4.19
 
-# Kernel Clang Flags
-TARGET_KERNEL_ADDITIONAL_FLAGS += LD=ld.lld AR=llvm-ar NM=llvm-nm STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump
-
 # LMKD
 TARGET_LMKD_STATS_LOG := true
 
