@@ -3,6 +3,10 @@ ro.camera.req.fmq.             u:object_r:exported_default_prop:s0
 ro.camera.res.fmq.             u:object_r:exported_default_prop:s0
 vendor.sys.camerainfo          u:object_r:exported_system_prop:s0
 
+camera.                                         u:object_r:vendor_camera_prop:s0
+ro.camera.res.fmq.size                          u:object_r:vendor_camera_prop:s0
+ro.camera.req.fmq.size                          u:object_r:vendor_camera_prop:s0
+
 # Global
 ro.boot.hwc              u:object_r:exported_default_prop:s0
 ro.carrier.name          u:object_r:exported_default_prop:s0
@@ -19,6 +23,22 @@ ro.ril.oem.meid                u:object_r:deviceid_prop:s0
 # Fingerprint
 sys.fp.miui.token              u:object_r:exported_system_prop:s0
 
+gf.debug.                                       u:object_r:vendor_fp_prop:s0
+
+# Power
+init.svc.recovery                               u:object_r:vendor_power_prop:s0
+
+# Sensor
+persist.sensor.                                 u:object_r:vendor_sensors_prop:s0
+invn.hal.data.                                  u:object_r:vendor_sensors_prop:s0
+invn.hal.entry.                                 u:object_r:vendor_sensors_prop:s0
+invn.hal.debug.                                 u:object_r:vendor_sensors_prop:s0
+invn.hal.verbose.                               u:object_r:vendor_sensors_prop:s0
+
+# Thermal
+sys.thermal.                                    u:object_r:vendor_thermal_normal_prop:s0
+persist.sys.thermal.config                      u:object_r:vendor_thermal_normal_prop:s0
+
 # MIUI
 ro.build.software.version	u:object_r:exported_system_prop:s0
 ro.cust.test            u:object_r:exported_system_prop:s0
@@ -28,5 +48,14 @@ ro.miui.                u:object_r:exported_system_prop:s0
 # Hardware
 ro.hardware.chipname           u:object_r:exported_default_prop:s0
 
+# WiFi
+ro.wlan.bdf                                     u:object_r:vendor_public_vendor_default_prop:s0
+ro.wlan.chip                                    u:object_r:vendor_public_vendor_default_prop:s0
+ro.ril.oem.wifimac                              u:object_r:vendor_wifimac_prop:s0
+
 # WiFi Display
 persist.vendor.setWFDInfo.     u:object_r:vendor_wfd_sys_debug_prop:s0
+
+# Bluetooth
+ro.ril.oem.btmac                                u:object_r:vendor_btmac_prop:s0
+persist.ro.ril.oem.btmac                        u:object_r:vendor_btmac_prop:s0
