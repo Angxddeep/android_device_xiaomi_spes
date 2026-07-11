@@ -351,8 +351,7 @@ PRODUCT_PACKAGES += \
     SpesSettingsProvider \
     SpesSimpleDeviceConfig \
     SpesSystemUI \
-    SpesTelephony \
-    SpesUpdaterOverlay 
+    SpesTelephony
 
 PRODUCT_PACKAGES += \
     SpesDeviceAsWebcam
