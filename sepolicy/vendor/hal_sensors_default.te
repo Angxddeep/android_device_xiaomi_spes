@@ -13,7 +13,6 @@ allow hal_sensors_default {
   sensors_device
 }:chr_file rw_file_perms;
 
-allow hal_sensors_default vendor_sysfs_iio:dir r_dir_perms;
-allow hal_sensors_default vendor_sysfs_iio:file rw_file_perms;
+rw_dir_file(hal_sensors_default, vendor_sysfs_iio)
 
 allow hal_sensors_default hal_audio_hwservice:hwservice_manager find;
