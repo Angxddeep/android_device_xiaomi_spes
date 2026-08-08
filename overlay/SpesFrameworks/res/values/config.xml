@@ -214,7 +214,7 @@
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
     <array name="config_autoBrightnessDisplayValuesNits">
-        <item>3.5</item>
+        <item>3.3</item>
         <item>4.3</item>
         <item>5.0</item>
         <item>17.0</item>
@@ -330,7 +330,7 @@
          The brightness values must be between 0 and 2047 and be non-decreasing.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>16</item>
+        <item>15</item>
         <item>19</item>
         <item>23</item>
         <item>77</item>
@@ -420,7 +420,7 @@
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">2</integer>
+    <integer name="config_screenBrightnessSettingMinimum">8</integer>
 
     <!-- Maximum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness above this level. -->
@@ -431,8 +431,8 @@
          when adapting to brighter or darker environments.  This parameter controls how quickly
          brightness changes occur in response to an observed change in light level that exceeds the
          hysteresis threshold. -->
-    <integer name="config_autoBrightnessBrighteningLightDebounce">800</integer>
-    <integer name="config_autoBrightnessDarkeningLightDebounce">2500</integer>
+    <integer name="config_autoBrightnessBrighteningLightDebounce">1000</integer>
+    <integer name="config_autoBrightnessDarkeningLightDebounce">1000</integer>
 
     <!-- Fast brightness animation ramp rate in brightness units per second-->
     <integer translatable="false" name="config_brightness_ramp_rate_fast">2466</integer>
@@ -704,7 +704,7 @@
          @see https://www.w3.org/TR/SVG/paths.html#PathData
          -->
     <string name="config_mainBuiltInDisplayCutout">M -31.85 57.275 a 31.85 31.85 90 1 0 63.7 0 a 31.85 31.85 90 1 0 -63.7 0 Z</string>
-     
+
         <!-- Like config_mainBuiltInDisplayCutout, but this path is used to report the
          one single bounding rect per device edge to the app via
          {@link DisplayCutout#getBoundingRect}. Note that this path should try to match the visual
@@ -735,7 +735,7 @@
     </string-array>
 
     <!-- Device configuration indicating whether we should avoid using accelerated graphics
-         in certain places to reduce RAM footprint. Allows to tune down 
+         in certain places to reduce RAM footprint. Allows to tune down
          device's memory use without going to the point of causing applications to turn
          off features. -->
     <bool name="config_avoidGfxAccel">true</bool>
@@ -825,7 +825,7 @@
 
     <!-- Whether the new Auto Selection Network UI should be shown -->
     <bool name="config_enableNewAutoSelectNetworkUI">true</bool>
-    
+
     <!-- Number of physical SIM slots on the device. This includes both eSIM and pSIM slots, and
          is not necessarily the same as the number of phones/logical modems supported by the device.
          For example, a multi-sim device can have 2 phones/logical modems, but 3 physical slots,
@@ -836,7 +836,7 @@
     <!-- Whether WM DisplayContent supports high performance transitions
          (lower-end devices may want to disable) -->
     <bool name="config_deviceSupportsHighPerfTransitions">false</bool>
-     
+
     <!-- Enable blur using overlay -->
     <bool name="config_enableBlurExpansion">true</bool>
     <bool name="config_enableBlur">true</bool>
