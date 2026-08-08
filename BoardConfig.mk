@@ -147,6 +147,7 @@ BOARD_KERNEL_CMDLINE += \
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/spes-perf_defconfig
+TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_HEADERS := kernel/xiaomi/spes
 TARGET_KERNEL_SOURCE := kernel/xiaomi/spes
 TARGET_KERNEL_CLANG_COMPILE := true
