@@ -19,21 +19,12 @@ from extract_utils.main import (
 )
 
 namespace_imports = [
-    'hardware/google/interfaces',
-    'hardware/google/pixel',
-    'hardware/lineage/interfaces/power-libperfmgr',
     'hardware/qcom-caf/bootctrl',
-    'hardware/qcom-caf/common/libqti-perfd-client',
     'hardware/qcom-caf/sm8250',
     'hardware/qcom-caf/wlan',
-    'hardware/qcom-caf/wlan/qcwcn',
     'hardware/xiaomi',
-    'vendor/qcom/opensource/commonsys/display',
-    'vendor/qcom/opensource/commonsys-intf/display',
     'vendor/qcom/opensource/display',
-    'vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um',
     'vendor/qcom/opensource/dataservices',
-    'hardware/qcom-caf/thermal-legacy-um',
     'device/xiaomi/spes',
 ]
 
@@ -72,7 +63,7 @@ blob_fixups: blob_fixups_user_type = {
         .remove_needed('libwfdcommonutils_proprietary.so')
         .remove_needed('libwfdmmservice_proprietary.so')
         .remove_needed('libwfdutils_proprietary.so'),
-}  # fmt: skip
+}
 
 module = ExtractUtilsModule(
     'spes',
