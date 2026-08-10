@@ -62,6 +62,8 @@ blob_fixups: blob_fixups_user_type = {
         .strip_debug_sections(),
     ('vendor/lib64/libwvhidl.so', 'vendor/lib64/mediadrm/libwvdrmengine.so'): blob_fixup()
         .add_needed('libcrypto_shim.so'),
+    'vendor/etc/seccomp_policy/atfwd@2.0.policy': blob_fixup()
+        .add_line_if_missing('gettid: 1'),
     'vendor/lib64/libdpps.so': blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
