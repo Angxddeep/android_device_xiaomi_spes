@@ -182,9 +182,6 @@ PRODUCT_PACKAGES += \
     libvulkan
 
 PRODUCT_PACKAGES += \
-    disable_configstore
-
-PRODUCT_PACKAGES += \
     gralloc.qcom
 
 # DRM
