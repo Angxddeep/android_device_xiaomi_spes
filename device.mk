@@ -218,7 +218,6 @@ PRODUCT_PACKAGES += \
 # Fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot-service.example_recovery \
-    fastbootd
 
 # GNSS
 PRODUCT_PACKAGES += \
