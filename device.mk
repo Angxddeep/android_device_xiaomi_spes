@@ -202,9 +202,6 @@ PRODUCT_PACKAGES += \
     libGLESv2_adreno_symlink64 \
     libq3dtools_adreno_symlink64
 
-PRODUCT_PACKAGES += \
-    disable_configstore
-
 # Dolby
 TARGET_EXCLUDES_AUDIOFX := true
 
