@@ -1,4 +1,18 @@
+on early-init
+    setprop sys.usb.configfs 1
+
+on init
+    setprop sys.usb.configfs 1
+    setprop sys.usb.config adb
+    setprop persist.sys.usb.config adb
+    start adbd
+
+on property:ro.boot.usbcontroller=*
+    setprop sys.usb.controller ${ro.boot.usbcontroller}
+    write /sys/class/udc/${ro.boot.usbcontroller}/device/../mode peripheral
+
 on boot
     mount none /sys/class/power_supply/bms/cycle_count /sys/class/power_supply/battery/cycle_count bind
 
 on property:vendor.post_boot.parsed=1
+
