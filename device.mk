@@ -168,9 +168,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
 
-# Dex/ART optimization
-USE_DEX2OAT_DEBUG := false
-
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
