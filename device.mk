@@ -169,7 +169,6 @@ PRODUCT_PACKAGES += \
     android.hardware.ir-service.example
 
 # Dex/ART optimization
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 USE_DEX2OAT_DEBUG := false
 
 # Display
