@@ -40,17 +40,6 @@
 using android::base::GetProperty;
 using std::string;
 
-std::vector<std::string> ro_props_default_source_order = {
-    "",
-    "odm.",
-    "odm_dlkm.",
-    "product.",
-    "system.",
-    "system_ext.",
-    "vendor.",
-    "vendor_dlkm.",
-};
-
 void property_override(string prop, string value)
 {
     auto pi = (prop_info*) __system_property_find(prop.c_str());
@@ -74,48 +63,8 @@ void load_dalvik_properties(void) {
         }
     }
 
-void set_ro_build_prop(const string &source, const string &prop,
-                       const string &value, bool product = false) {
-    string prop_name;
-
-    if (product)
-        prop_name = "ro.product." + source + prop;
-    else
-        prop_name = "ro." + source + "build." + prop;
-
-    property_override(prop_name.c_str(), value.c_str());
-}
-
-void set_device_props(const string model, const string name, const string marketname,
-                      const string mod_device) {
-    // list of partitions to override props
-    string source_partitions[] = { "", "bootimage.", "product.""system.",
-                                   "system_ext.", "vendor." };
-
-    for (const string &source : source_partitions) {
-        set_ro_build_prop(source, "model", model, true);
-        set_ro_build_prop(source, "name", name, true);
-        set_ro_build_prop(source, "marketname", marketname, true);
-    }
-    property_override("ro.product.mod_device", mod_device.c_str());
-    property_override("bluetooth.device.default_name", marketname.c_str());
-    property_override("vendor.usb.product_string", marketname.c_str());
-}
-
 void vendor_load_properties()
 {
-    // Detect device and configure properties
-
-    if (GetProperty("ro.boot.hwname", "") == "spesn") { // Redmi Note 11 NFC
-        set_device_props("2201117TY", "spesn_global", "Redmi Note 11 NFC", "spesn_global");
-    } else { // Redmi Note 11
-        string region = GetProperty("ro.boot.hwc", "");
-        if (region == "IN") // Redmi Note 11 India
-            set_device_props("2201117TI", "spes_in", "Redmi Note 11", "spes_in_global");
-        else // Redmi Note 11 Global
-            set_device_props("2201117TG", "spes_global", "Redmi Note 11", "spes_global");
-    }
-
     // Set hardware revision
     property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
 
