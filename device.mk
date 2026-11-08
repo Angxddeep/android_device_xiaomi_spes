@@ -192,6 +192,15 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor \
     com.android.hardware.drm.clearkey
 
+# Face unlock
+TARGET_PROVIDES_FACE_UNLOCK_HAL := true
+
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.face-service.xiaomi
+
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.biometrics.face.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.biometrics.face.xml
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint-service.xiaomi \
